@@ -47,6 +47,7 @@ The above variables where choosen as they included either mean or std in their o
 ## Transformations
 
 This script will:
+
 1. Load the various files from the UCI data set.
 2. Merges the three test and three train files into a single data table, setting textual columns heading where possible.
 3. Creates a smaller second data set, containing only mean and std variables.
