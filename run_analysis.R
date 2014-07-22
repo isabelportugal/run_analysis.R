@@ -43,6 +43,8 @@ colnames(data) <- features[, 2]
 # Merge all previous datasets
 data <- cbind(subject, label, data)
 
+write.table(data, file="data_set.txt")
+
 # Create a smaller dataset containing only the mean and std variables
 search <- grep("-mean|-std", colnames(data))
 dataMeanStd <- data[,c(1,2,search)]
@@ -52,7 +54,7 @@ melted = melt(dataMeanStd, id.var = c("subject", "label"))
 means = dcast(melted , subject + label ~ variable, mean)
 
 # Save the resulting dataset
-write.table(means, file="tidy_data.txt", sep";")
+write.table(means, file="tidy_data.txt")
 
 # Output the final dataset
 means
