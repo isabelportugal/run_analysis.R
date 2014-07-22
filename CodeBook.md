@@ -44,3 +44,11 @@ tBodyAcc, tGravityAcc, tBodyAccJerk, tBodyGyro, tBodyGyroJerk, tBodyAccMag, tBod
 
 The above variables where choosen as they included either mean or std in their original names.
 
+## Transformations
+
+This script will:
+1. Load the various files from the UCI data set.
+2. Merges the three test and three train files into a single data table, setting textual columns heading where possible.
+3. Creates a smaller second data set, containing only mean and std variables.
+4. Computes the means of this secondary data set, group by subject/activity.
+Saves this last data set to `tidy_data.txt`.
