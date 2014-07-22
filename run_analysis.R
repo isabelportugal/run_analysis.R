@@ -10,8 +10,8 @@ dataDir  <- "UCI HAR Dataset"
 if (!file.exists(dataFile)){  
   fileURL <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileURL, dataFile)
-  if (!file.exists(dataDir)){ unzip(dataFile)}
-  ## Read all required .txt files and label the datasets
+  
+# Read all required .txt files and label the datasets
   if (!file.exists(dataDir)){ unzip(dataFile)}
   }
 
